@@ -55,6 +55,7 @@ body::before {
   height: 100%;
   object-fit: cover;
   opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
 
 .s-card__image {
@@ -62,6 +63,7 @@ body::before {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transition: 1s ease-in-out;
 }
 
 .s-card__title {
@@ -111,4 +113,15 @@ body::before {
   background-color: #ffffff;
   width: 50%;
   height: 2px;
+}
+
+/* Hover Animation */
+
+.s-card--hovered .s-card__background {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.s-card--hovered .s-card__image {
+  transform: scale(1.4);
 }
